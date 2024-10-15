@@ -1,5 +1,5 @@
 {
-  "name": "refine-google-auth",
+  "name": "travel-vista",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.15",
+    "next-auth": "^4.24.8",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.15"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
