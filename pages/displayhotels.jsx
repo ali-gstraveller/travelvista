@@ -12,8 +12,8 @@ export default function DisplayHotels(){
     const fetchHotels = async () => {
         const res = await fetch('/api/hotels');
         const { data } = await res.json();
-        setHotels(data);
-      };
+        setHotels(data) ;
+      } ;
 
     console.log('display Hotels => ,' , hotels)
 
