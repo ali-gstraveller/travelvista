@@ -17,7 +17,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <main className={styles.main}>
-        <Dashboard/>
+        {/* <Dashboard/> */}
+        <Image
+      src="/GS.png"
+      width={1250}
+      height={850}
+      alt="Picture of the author"
+      onClick={  ()=>{   window.location.href="https://www.trip.com/flights/?to=home&Allianceid=5546479&SID=124875388&trip_sub1=gstravellers&trip_sub3=D656182"   }    }
+    />
         </main>
       
     </div>

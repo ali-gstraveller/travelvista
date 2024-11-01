@@ -3,10 +3,12 @@ import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { present,notpresent }  from '../../store/userSlice'
+import { present,notpresent }  from '../../store/userSlice';
+import { useRouter } from 'next/router';
 
 export default function Dashboard() {
 
+    const router = useRouter();
     const [hotels, setHotels] = useState([]);
     const dispatch = useDispatch();
     const { data: session } = useSession();
@@ -54,7 +56,7 @@ export default function Dashboard() {
         <div style={{ backgroundImage:  'url("/cover.webp")',width:'1250px',height:"700px" }} >
             {/* <h1 style={{color:"white", marginLeft:"450px" }} >Kindly enter your preference !</h1> */}
             <input placeholder="where to ?" type="text" style={{ borderRadius:"15px", padding:'9px',marginLeft:"550px" ,marginTop:"50px"   }} />
-            <button style={{ borderRadius:"15px", padding:'9px'}}> Submit </button>    
+            <button onClick={()=>{  router.push('/searchPage');  }}  style={{ borderRadius:"15px", padding:'9px'}}> Submit </button>    
         </div>
     </div>
     )
